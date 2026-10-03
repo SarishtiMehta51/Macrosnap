@@ -14,7 +14,8 @@ TWILIO_CONTENT_SID= st.secrets["TWILIO_CONTENT_SID"]
 
 @st.cache_resource
 def get_gemini_client():
-    return genai.client(api_key = GEMINI_API_KEY)
+    return 
+genai.Client(api_key = GEMINI_API_KEY)
 
 @st.cache_resource
 def get_twilio_client():
@@ -22,7 +23,7 @@ def get_twilio_client():
  
 twilio_client = get_twilio_client()
 
-gemini_client= get_gemini_client
+gemini_client= get_gemini_client()
 MODEL_NAME = "gemini-3.8-flash"
 
 def clean_whatsapp_text(text):
