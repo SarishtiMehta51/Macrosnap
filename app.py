@@ -15,7 +15,7 @@ TWILIO_CONTENT_SID= st.secrets["TWILIO_CONTENT_SID"]
 @st.cache_resource
 def get_gemini_client():
     return 
-genai.Client(api_key = GEMINI_API_KEY)
+genai.client(api_key = GEMINI_API_KEY)
 
 @st.cache_resource
 def get_twilio_client():
